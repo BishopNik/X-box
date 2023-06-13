@@ -46,6 +46,7 @@ a {
 :root {
   --bg-color-header-footer: #373a3c;
   --border-header: #777777;
+  --text-best_value: #435766;
   --bg-color-best: radial-gradient(100% 100% at 50% 0%, #686c6f 0%, #373a3c 100%);
   --bg-color-second: radial-gradient(
     100% 100% at 50% 0%,
@@ -60,6 +61,8 @@ a {
   --animation-svg: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --animation-logo: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --animation-butt: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-butt-bv: font-size 125ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -356,9 +359,98 @@ body {
 
 .best_value {
   height: 865px;
+  padding-top: 64px;
   line-height: 21px;
   color: var(--color-white);
   background: var(--bg-color-best);
+}
+
+.best_value-title {
+  text-align: center;
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.best_value-title::before {
+  display: flex;
+  justify-content: center;
+  content: '';
+  width: 63px;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  background-image: url(../images/xbox.svg);
+}
+
+.best_value-subtitle {
+  text-align: center;
+  margin-bottom: 44px;
+  font-size: 36px;
+  line-height: 41px;
+}
+
+.best_value-cards {
+  display: flex;
+  justify-content: center;
+  gap: 61px;
+}
+
+.best_value-card {
+  width: 320px;
+  height: 420px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-hover-button);
+}
+
+.best_value-card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  height: 180px;
+  margin-bottom: 22px;
+}
+
+.best_value-card-about {
+  margin-bottom: 13px;
+  padding-left: 21px;
+  color: var(--text-best_value);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.best_value-card-text {
+  margin-bottom: 40px;
+  padding-left: 21px;
+  padding-right: 39px;
+  color: var(--text-best_value);
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.best_value-card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 278px;
+  height: 60px;
+  color: var(--color-white);
+  background-color: var(--color-hover-button);
+  border-radius: 4px;
+  transition: var(--animation-butt-bv);
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.best_value-card-button:hover {
+  font-size: 18px;
+  transition: var(--animation-butt-bv);
+  box-shadow: 1px 0px 4px 5px rgba(102, 128, 67, 0.58);
+  -webkit-box-shadow: 1px 0px 4px 5px rgba(102, 128, 67, 0.58);
+  -moz-box-shadow: 1px 0px 4px 5px rgba(102, 128, 67, 0.58);
 }
 
 /* Exclusive Gemes */
