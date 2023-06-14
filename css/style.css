@@ -59,6 +59,7 @@ a {
   --color-hover-button: #8dd83d;
   --color-block-menu: #7dd42f;
   --animation: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-menu: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --animation-svg: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --animation-logo: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --animation-butt: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -128,7 +129,33 @@ body {
 }
 
 .header-nav-item {
+  position: relative;
   padding: 0;
+}
+
+.header-nav-item-menu-games,
+.header-nav-item-menu-console,
+.header-nav-item-menu-myxbox {
+  position: absolute;
+  top: 100%;
+  width: calc(100% + 150px);
+  height: 300px;
+  background-color: var(--bg-color-header-footer);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transform: translateY(-150%);
+  transition: var(--animation-butt), var(--animation-menu);
+  z-index: 10;
+  padding: 30px;
+}
+
+.header-nav-item-menu-games {
+  right: 0;
+}
+
+.header-nav-item-menu-myxbox,
+.header-nav-item-menu-console {
+  left: 0;
 }
 
 .header-nav-item-link {
@@ -167,6 +194,29 @@ body {
   transition: var(--animation);
 }
 
+.header-nav-item-link.link:hover,
+.header-nav-item-link.link:focus {
+  color: var(--color-white);
+  transition: var(--animation-butt);
+}
+
+.header-nav-item-menu-games:hover,
+.header-nav-item-menu-games:focus,
+.header-nav-item-menu-console:hover,
+.header-nav-item-menu-console:focus,
+.header-nav-item-menu-myxbox:hover,
+.header-nav-item-menu-myxbox:focus,
+.header-nav-item:hover .header-nav-item-menu-games,
+.header-nav-item:focus .header-nav-item-menu-games,
+.header-nav-item:hover .header-nav-item-menu-console,
+.header-nav-item:focus .header-nav-item-menu-console,
+.header-nav-item:hover .header-nav-item-menu-myxbox,
+.header-nav-item:focus .header-nav-item-menu-myxbox {
+  transform: translateY(0);
+  transition: var(--animation-menu);
+  opacity: 0.9;
+}
+
 .header-nav-item:nth-child(1) {
   position: relative;
   margin-right: 288px;
@@ -190,10 +240,12 @@ body {
 
 .header-nav-item:nth-child(2) {
   margin-right: 24px;
+  padding: 22px 0;
 }
 
 .header-nav-item:nth-child(3) {
   margin-right: 28px;
+  padding: 22px 0;
 }
 
 .header-nav-item:nth-child(4) {
@@ -202,6 +254,10 @@ body {
 
 .header-nav-item:nth-child(5) {
   margin-right: 29px;
+}
+
+.header-nav-item:nth-child(6) {
+  padding: 22px 0;
 }
 
 .header-nav-item:nth-child(6) .header-nav-item-link {
@@ -272,7 +328,6 @@ body {
 
 .main-subsection-center-bg {
   position: absolute;
-  content: '';
   top: 0;
   left: 0;
   width: 100%;
@@ -463,6 +518,9 @@ body {
   background: radial-gradient(rgba(23, 23, 23, 0.5), rgba(23, 23, 23, 0.5)),
     url(../images/excl-section/Rectangle.jpg);
   background-size: cover;
+  padding-top: 97px;
+  padding-bottom: 140px;
+  overflow: hidden;
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -471,6 +529,132 @@ body {
       url(../images/excl-section/Rectangle@2x.jpg);
     background-size: cover;
   }
+}
+
+.exclusive-title {
+  text-align: center;
+  margin-bottom: 55px;
+  font-size: 36px;
+  line-height: 41px;
+  color: var(--color-white);
+}
+
+.exclusive-games {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 74px;
+  padding-left: 66px;
+}
+
+.exclusive-game {
+  width: 320px;
+  height: 420px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-hover-button);
+  opacity: 0.9;
+  border-radius: 4px;
+  transition: var(--animation-logo);
+}
+
+.exclusive-game:hover,
+.exclusive-game:focus {
+  scale: 1.1;
+  transition: var(--animation-logo);
+}
+
+.exclusive-game-img {
+  margin-bottom: 25px;
+}
+
+.exclusive-game-about {
+  margin-bottom: 16px;
+  padding-left: 21px;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--text-best_value);
+}
+
+.exclusive-game:not(:nth-child(1)) .exclusive-game-about {
+  margin-bottom: 109px;
+}
+
+.exclusive-game-text {
+  margin-bottom: 45px;
+  padding-left: 21px;
+  padding-right: 32px;
+  font-size: 21px;
+  line-height: 24px;
+  color: var(--text-best_value);
+}
+
+.exclusive-game-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 278px;
+  height: 60px;
+  background: var(--color-hover-button);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--color-white);
+}
+
+.exlusive-button {
+  position: relative;
+  width: 207px;
+  height: 53px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exlusive-button-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-button);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.exlusive-button-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--color-white);
+  z-index: 2;
+}
+
+.exlusive-button-bg-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-hover-button);
+  border-radius: 4px;
+  opacity: 0;
+  transition: var(--animation-butt);
+  z-index: 1;
+}
+
+.exlusive-button:hover .exlusive-button-bg-hover,
+.exlusive-button:focus .exlusive-button-bg-hover {
+  opacity: 1;
+  transition: var(--animation-butt);
 }
 
 /* Desing Lab */
