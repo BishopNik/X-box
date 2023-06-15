@@ -514,6 +514,7 @@ body {
 /* Exclusive Gemes */
 
 .exclusive {
+  position: relative;
   height: 880px;
   background: radial-gradient(rgba(23, 23, 23, 0.5), rgba(23, 23, 23, 0.5)),
     url(../images/excl-section/Rectangle.jpg);
@@ -537,6 +538,23 @@ body {
   font-size: 36px;
   line-height: 41px;
   color: var(--color-white);
+}
+
+.exclusive-icon-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  width: 130px;
+  height: 194px;
+}
+
+.exclusive-icon-next:hover {
+  fill: var(--color-hover-button);
+  cursor: pointer;
 }
 
 .exclusive-games {
