@@ -326,6 +326,7 @@ body {
   min-width: 148px;
 }
 
+.callofduty-button-bg,
 .main-subsection-center-bg {
   position: absolute;
   top: 0;
@@ -337,6 +338,7 @@ body {
   z-index: 1;
 }
 
+.callofduty-button-bg-hover,
 .main-subsection-center-bg-hover {
   position: absolute;
   top: 0;
@@ -350,6 +352,7 @@ body {
   transition: var(--animation-butt);
 }
 
+.callofduty-button-button,
 .main-subsection-center-button {
   position: absolute;
   display: flex;
@@ -367,6 +370,8 @@ body {
   z-index: 2;
 }
 
+.callofduty-item:hover .callofduty-button-bg-hover,
+.callofduty-item:focus .callofduty-button-bg-hover,
 .main-subsection-center-item:hover .main-subsection-center-bg-hover,
 .main-subsection-center-item:focus .main-subsection-center-bg-hover {
   opacity: 1;
@@ -780,6 +785,57 @@ body {
 }
 
 /* Call of Duty */
+
+.callofduty {
+  height: 550px;
+  padding-top: 109px;
+  padding-bottom: 204px;
+  padding-left: 831px;
+  background: radial-gradient(rgba(119, 119, 119, 0.35), rgba(119, 119, 119, 0.35)),
+    url(../images/call-of-duty/CoD-WWII.jpg);
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .callofduty {
+    background: radial-gradient(rgba(119, 119, 119, 0.35), rgba(119, 119, 119, 0.35)),
+      url(../images/call-of-duty/CoD-WWII@2x.jpg);
+    background-size: cover;
+  }
+}
+
+.callofduty-title {
+  margin-bottom: 2px;
+  font-size: 36px;
+  line-height: 41px;
+  color: var(--color-white);
+}
+
+.callofduty-subtitle {
+  margin-bottom: 140px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-white);
+}
+
+.callofduty-buttons {
+  display: flex;
+  gap: 13px;
+}
+
+.callofduty-item {
+  position: relative;
+  height: 38px;
+  border-radius: 4px;
+}
+
+.callofduty-item:nth-child(1) {
+  width: 136px;
+}
+
+.callofduty-item:nth-child(2) {
+  width: 148px;
+}
 
 /* Call of Duty Example */
 
