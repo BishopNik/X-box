@@ -326,6 +326,7 @@ body {
   min-width: 148px;
 }
 
+.gamereview-button-bg,
 .callofduty-button-bg,
 .main-subsection-center-bg {
   position: absolute;
@@ -338,6 +339,7 @@ body {
   z-index: 1;
 }
 
+.gamereview-button-bg-hover,
 .callofduty-button-bg-hover,
 .main-subsection-center-bg-hover {
   position: absolute;
@@ -352,7 +354,8 @@ body {
   transition: var(--animation-butt);
 }
 
-.callofduty-button-button,
+.gamereview-button-main,
+.callofduty-button-main,
 .main-subsection-center-button {
   position: absolute;
   display: flex;
@@ -370,6 +373,8 @@ body {
   z-index: 2;
 }
 
+.gamereview-item:hover .gamereview-button-bg-hover,
+.gamereview-item:focus .gamereview-button-bg-hover,
 .callofduty-item:hover .callofduty-button-bg-hover,
 .callofduty-item:focus .callofduty-button-bg-hover,
 .main-subsection-center-item:hover .main-subsection-center-bg-hover,
@@ -838,6 +843,129 @@ body {
 }
 
 /* Call of Duty Example */
+
+.gamereview {
+  position: relative;
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(76, 80, 82, 0.1) 0%,
+    rgba(95, 98, 101, 0.1) 100%
+  );
+  padding-top: 99px;
+  padding-bottom: 109px;
+}
+
+.gamereview-title {
+  margin-right: auto;
+  margin-left: auto;
+  width: 293px;
+  height: 82px;
+  margin-bottom: 169px;
+  font-size: 36px;
+  line-height: 41px;
+  color: var(--text-best_value);
+}
+
+.gamereview-buttons-cons,
+.gamereview-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 121px;
+}
+
+.gamereview-item {
+  position: relative;
+  height: 52px;
+}
+
+.gamereview-item:nth-child(1) {
+  width: 170px;
+}
+
+.gamereview-item:nth-child(2) {
+  width: 235px;
+}
+
+.gamereview-video {
+  text-align: center;
+  margin-bottom: 98px;
+}
+
+.gamereview-simple {
+  display: inline-flex;
+}
+
+.gamereview-simple:nth-child(1) {
+  gap: 126px;
+  margin-bottom: 97px;
+  margin-left: 172px;
+}
+
+.gamereview-simple:nth-child(2) {
+  flex-direction: row-reverse;
+  gap: 69px;
+  margin-left: 172px;
+  margin-bottom: 105px;
+}
+
+.gamereview-img-simple {
+  width: 524px;
+  height: 359px;
+  background: #f7f8f8;
+  border: 1px solid #cecece;
+  border-radius: 0px 0px 5px 5px;
+  overflow: hidden;
+}
+
+.gamereview-text-simple {
+  width: 414px;
+  padding-top: 20px;
+  font-size: 36px;
+  line-height: 41px;
+  color: var(--text-best_value);
+}
+
+.gamereview-techinfo {
+  text-align: center;
+  margin-bottom: 49px;
+  font-size: 36px;
+  line-height: 41px;
+  color: var(--text-best_value);
+}
+
+.gamereview-techinfo-items {
+  display: flex;
+  gap: 65px;
+  margin-bottom: 80px;
+  margin-left: 163px;
+}
+
+.gamereview-techinfo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  width: 320px;
+}
+
+.gamereview-techinfo-item:nth-child(1) {
+  gap: 22px;
+}
+
+.gamereview-techinfo-items-text {
+  font-size: 21px;
+  line-height: 24px;
+  color: var(--text-best_value);
+}
+
+.gamereview-buttons-cons {
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.gamereview-buttons-cons .gamereview-item {
+  width: 235px;
+}
 
 /* Footer */
 
